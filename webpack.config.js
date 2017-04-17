@@ -25,6 +25,7 @@ module.exports = {
       ErrorModal: 'app/components/ErrorModal.jsx',
       applicationStyles: 'app/styles/app.scss',
       Navbar: 'app/components/Navbar.jsx',
+      Clock: 'app/components/Clock.jsx',
       CountDown: 'app/components/CountDown.jsx',
       Timer: 'app/components/Timer.jsx'
     },
