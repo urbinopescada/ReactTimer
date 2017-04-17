@@ -16,6 +16,16 @@ module.exports = React.createClass({
       countdownStatus: 'started'
     });
   },
+
+  componentWillMount: function(){
+    console.log("componentWillMount");
+  },
+  componentDidMount: function(){
+    console.log("componentDidMount");
+  },
+  componentWillUpdate: function(nextProps, NextState) {
+
+  },
   componentDidUpdate: function (prevProps, prevState) {
     if (this.state.countdownStatus !== prevState.countdownStatus) {
       switch (this.state.countdownStatus ) {
@@ -29,6 +39,13 @@ module.exports = React.createClass({
           this.timer== null;
           break;
       }
+    }
+  },
+  componentWillUnmount: function (){
+    console.log("CcomponentWillUnmount");
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer== null;
     }
   },
   startTimer: function () {
