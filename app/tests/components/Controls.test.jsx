@@ -12,7 +12,7 @@ describe('Controls',()=>{
 
   describe('render', () =>{
       it('should render pause when started',()=>{
-          var controls = TestUtils.renderIntoDocument(<Controls countDownStatus='started'/>);
+          var controls = TestUtils.renderIntoDocument(<Controls countdownStatus='started'/>);
           //$el is going to store the root of our component,
           // ReactDOM.findDOMNode(clock)) converts our component into the actual HTML
           var $el = $(ReactDOM.findDOMNode(controls));
@@ -22,7 +22,7 @@ describe('Controls',()=>{
           expect($pauseButton.length).toBe(1); //length= number of buttons found by Jquerys
       });
       it('should render start when started',()=>{
-          var controls = TestUtils.renderIntoDocument(<Controls countDownStatus='paused'/>);
+          var controls = TestUtils.renderIntoDocument(<Controls countdownStatus='paused'/>);
           //$el is going to store the root of our component,
           // ReactDOM.findDOMNode(clock)) converts our component into the actual HTML
           var $el = $(ReactDOM.findDOMNode(controls));
