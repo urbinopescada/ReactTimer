@@ -55,6 +55,9 @@ module.exports = React.createClass({
             count: newCount>=0 ? newCount : 0
         });
         if (newCount<=0) {
+          this.setState({
+            countdownStatus: 'stopped'
+          });
           clearInterval(this.timer);
           this.timer== null;
         }
