@@ -9,11 +9,9 @@ module.exports = React.createClass({
     //This function is called to generate duferent functions that will be called when each button is pressed;
     //is using closures...
     return () => {
+      console.log("click" + newStatus);
       this.props.onStatusChange(newStatus);
     }
-  },
-  componentWillReceiveProps: function (newProps){
-    console.log("componentWillReceiveProps",newProps);
   },
   render: function () {
     var {countdownStatus} = this.props;
@@ -21,7 +19,7 @@ module.exports = React.createClass({
       if (countdownStatus==="started"){
         return <button className="button secondary " onClick={this.onStatusChange('paused')}>Pause</button>
       }
-      else if (countdownStatus==="paused") {
+      else {
         return <button className="button primary " onClick={this.onStatusChange('started')}>Start</button>
       }
     };

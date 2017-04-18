@@ -6,8 +6,9 @@ var Main = require("Main");
 var CountDown = require("CountDown");
 var Timer = require("Timer");
 
-//Load foundation using the css laoder (ie: css!) and inject the styles into our html, we do that chaining the loaders
-require('style!css!foundation-sites/dist/css/foundation.min.css');
+////Load foundation using the css loader (ie: css!) and inject the styles into our html, we do that chaining the loaders
+// require('style!css!foundation-sites/dist/css/foundation.min.css');
+
 //Fire up foundation
 $(document).foundation();
 

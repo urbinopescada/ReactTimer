@@ -4,6 +4,9 @@ module.exports = React.createClass({
   onSubmit: function(e){
     e.preventDefault();
     var strSecs = this.refs.txtSeconds.value;
+
+    console.log('input count ' + $('input').length);
+    
     if(strSecs.match(/^[0-9]*$/)) {
       this.refs.txtSeconds.value = "";
       this.props.onSetCountDown(parseInt(strSecs,10));
